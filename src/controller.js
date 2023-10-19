@@ -1,14 +1,14 @@
 import {pool} from './database.js';
 
 class LibrosController{ 
-    async getAll(req, res) {
-        const [result]= await pool.query('SELECT * FROM Libros');
+    async getAll(_req, res) {
+        const [result]= await pool.query('SELECT * FROM libros');
         res.json(result);
     }
 
     async getOne(req, res) {
         const id = req.body.id;
-        const [result]= await pool.query('SELECT * FROM Libros WHERE id = ?', [id]);
+        const [result]= await pool.query(`SELECT * FROM libros WHERE id =(?)`, [id]);
         if (result.length > 0) {
             //devolver el libro encontrado
             res.json(result[0]);
