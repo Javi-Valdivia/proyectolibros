@@ -17,6 +17,16 @@ class LibrosController{
             res.status(404).json({"Error": `Libro no encontrado: ${id}`});
         }
     }
+
+    async add(req, res){ 
+        const libros = req.body;
+        const [result] = await pool.query(` INSERT INTO libros (nombre, autor, categoria, año_publicacion, isbn) VALUES (?, ?, ?, ?, ?)` , [libros.nombre, libros.autor, libros.categoria, libros.año_publicacion, libros.isbn]);
+        res.json({"Id insertado": result.insertId});
+    }
+
+
+
+
 }
 
 
