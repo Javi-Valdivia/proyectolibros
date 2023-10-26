@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-10-2023 a las 07:09:45
+-- Tiempo de generación: 26-10-2023 a las 03:20:36
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -43,7 +43,17 @@ CREATE TABLE `libros` (
 INSERT INTO `libros` (`id`, `nombre`, `autor`, `categoria`, `año_publicacion`, `isbn`) VALUES
 (1, 'CIEN AÑOS DE SOLEDAD (C.A.100)', 'Garcia Marquez, Gabriel', 'Novela', '1989-01-01', '9788423919000'),
 (2, 'Don Quijote de la Mancha', 'Cervantes', 'Novela', '1987-01-01', '9788420727967'),
-(3, 'Viaje al centro de la tierra', 'Verne', 'Ficcion', '2008-01-01', '9788498721119');
+(3, 'Viaje al centro de la tierra', 'Verne', 'Ficcion', '2008-01-01', '9788498721119'),
+(4, 'El Señor de los Anillos', 'J.R.R. Tolkien', 'Fantasía', '1954-01-01', '978-84-9838-6'),
+(5, 'La Odisea', 'Homero', 'Epopeya', '0001-01-01', '978-84-941614'),
+(6, 'El Quijote de la Mancha', 'Miguel de Cervantes', 'Novela', '1605-01-01', '978-84-9788-8'),
+(7, 'Cien años de soledad', 'Gabriel García Márquez', 'Novela', '1967-01-01', '978-84-339-05'),
+(8, 'La metamorfosis', 'Franz Kafka', 'Novela corta', '1915-01-01', '978-84-339-02'),
+(9, 'El principito', 'Antoine de Saint-Exupéry', 'Novela corta', '1943-01-01', '978-84-339-12'),
+(10, 'Los miserables', 'Victor Hugo', 'Novela', '1862-01-01', '978-84-339-12'),
+(11, 'Hamlet', 'William Shakespeare', 'Tragedia', '1603-01-01', '978-84-339-12'),
+(13, 'Harry Potter y la piedra filos', 'J.K. Rowling', 'Fantasia', '1997-01-01', '9788478884499'),
+(14, 'La Biblia', 'Dios', 'Religión', '0001-01-01', '9788422015001');
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +73,7 @@ ALTER TABLE `libros`
 -- AUTO_INCREMENT de la tabla `libros`
 --
 ALTER TABLE `libros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
